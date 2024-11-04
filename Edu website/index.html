@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education website</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/69cf8EHxN52ezl7BjXNkz8+69D13wiH5opjA4vl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar background h-nav">
+        <ul class="navlist">
+            <div class="logo"><img src="images/logo.jpg" alt=""></div>
+            <li> <a href="#Home">Home</a></li>
+            <li> <a href="#Service">Services</a></li>
+            <li> <a href="#About">About</a></li>
+            <li> <a href="#Contact">Contact</a></li>
+        </ul>
+        <div class="rightnav" >
+            <input type="text" name="search" id="search">
+            <button class="btn-sm">Search</button>
+        </div>
+        
+    </nav>
+    <section class="background firstsection" id="Home">
+        <div class="mainbox">
+            <div class="firsthalf">
+                <p class="textbig">Unlock Your Potential with Online Learning</p>
+                <p class="textsm">Join thousands of learners who are expanding their skills and knowledge from the comfort of their homes.</p>
+                <div class="buttons">
+                    <button class="btn1">Get Started Now</button>
+                    <button class="btn1">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="heading" id="Service">
+        <h2>What We Offer</h2>
+    </div>
+    <section class="secright">
+        <div class="para">
+            <p class="sectag textbig">Personalized Learning Paths</p>
+            <p class="secsubtag textsm">Tailor your learning experience based on your interests and goals. Our platform adapts to your needs, ensuring you get the most relevant content.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="images/pexels-pixabay-207756.jpg" alt="" class="image1">
+        </div>
+    </section>
+    <section class="secleft">
+        <div class="para">
+            <p class="sectag textbig">Interactive Course Materials</p>
+            <p class="secsubtag textsm">Engage with dynamic content that makes learning fun and effective. Our courses include videos, quizzes, and hands-on projects to reinforce your knowledge.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="images/pexels-pixabay-289737.jpg" alt="" class="image1">
+        </div>
+    </section>
+    <section class="secright">
+        <div class="para">
+            <p class="sectag textbig">Expert Instructors
+            </p>
+            <p class="secsubtag textsm">Learn from industry professionals and experienced educators. Get insights from the experts who know what it takes to succeed in your field.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="images/pexels-julia-m-cameron-4144923.jpg" alt="" class="image1">
+        </div>
+    </section>
+    <section class="testimonials" id="About">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"This platform transformed my learning experience! Highly recommend to anyone."</p>
+            <h4>- John Doe</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Courses are well-organized and the instructors are amazing."</p>
+            <h4>- Jane Smith</h4>
+        </div>
+    </section>
+
+    
+    <footer class="footer" id="Contact">
+        <div class="footer-content">
+            <p>© 2024 Your E-Learning Website Name</p>
+            <p>All Rights Reserved | <a href="#terms">Terms of Service</a> | <a href="#privacy">Privacy Policy</a></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://x.com/"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="https://www.linkedin.com"><img src="images/linkedin (1).png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-DBjhmceqAOKCOj1xjBBY5CR0Cw+wCocnJ8EY5N5mIO7xUjtX43S0Yf4HJfFaDOjZ" crossorigin="anonymous"></script>
+    <script>
+        // Define the offset you want in pixels
+        const offset = 70; // Adjust this value as needed for your layout
+    
+        // Smooth scroll with offset for navbar links
+        document.querySelectorAll('.navlist a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default anchor behavior
+    
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                const elementPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+                
+                window.scrollTo({
+                    top: elementPosition - offset, // Adjust scroll position by offset
+                    behavior: 'smooth'             // Enable smooth scrolling
+                });
+            });
+        });
+    </script>
+    
+    </html>
